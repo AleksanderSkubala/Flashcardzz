@@ -1,10 +1,14 @@
 import Vue from 'vue';
-import App from './App.vue';
 import './registerServiceWorker';
+import Vuesax from 'vuesax';
+import 'vuesax/dist/vuesax.css';
+import App from './App.vue';
 import router from './router';
 import store from './store';
 
 Vue.config.productionTip = false;
+
+Vue.use(Vuesax);
 
 router.afterEach((to) => {
   Vue.nextTick(() => {

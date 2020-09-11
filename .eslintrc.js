@@ -11,6 +11,7 @@ module.exports = {
     parser: 'babel-eslint',
   },
   rules: {
+    'import/no-cycle': 0,
     'linebreak-style': 0,
     'no-alert': 0,
     'quotes': 0,

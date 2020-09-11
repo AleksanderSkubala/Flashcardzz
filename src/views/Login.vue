@@ -20,7 +20,7 @@ export default {
       auth.signInWithPopup(googleProvider)
         .then((result) => {
           store.dispatch("fetchUser", result.user);
-          this.$router.push('/');
+          this.$router.push('/app');
         })
         .catch((err) => alert(`Something went wrong: ${err.message}`));
     },

@@ -1,6 +1,7 @@
 import firebase from 'firebase';
 import 'firebase/auth';
 import 'firebase/analytics';
+import 'firebase/firestore';
 import router from './router';
 import store from './store';
 
@@ -27,5 +28,6 @@ firebase.auth().onAuthStateChanged((user) => {
   }
 });
 
+export const db = firebase.firestore();
 export const auth = firebase.auth();
 export const googleProvider = new firebase.auth.GoogleAuthProvider();
